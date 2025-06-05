@@ -12,15 +12,31 @@ function rockPaperScissor() {
   let compInput;
   const compRandom = Math.floor(Math.random() * 3) + 1;
 
-  if (compRandom === 1) {
-    compInput = "rock";
-  } else if (compRandom === 2) {
-    compInput = "paper";
-  } else if (compRandom === 3) {
-    compInput = "scissor";
-  } else {
-    compInput = NaN;
+  switch (compRandom) {
+    case 1:
+      compInput = "rock";
+      break;
+
+    case 2:
+      compInput = "paper";
+      break;
+    case 3:
+      compInput = "scissor";
+      break;
+    default:
+      compInput = "random";
+      break;
   }
+
+  // if (compRandom === 1) {
+  //   compInput = "rock";
+  // } else if (compRandom === 2) {
+  //   compInput = "paper";
+  // } else if (compRandom === 3) {
+  //   compInput = "scissor";
+  // } else {
+  //   compInput = NaN;
+  // }
   //remove consoles
   console.log(compRandom);
   console.log(compInput);
