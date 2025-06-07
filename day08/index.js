@@ -1,1 +1,7 @@
-console.log("this is day 6")
+var name = "Felix";
+function sayName() {
+  console.log(this.name);
+}
+
+sayName();
+// execution context
