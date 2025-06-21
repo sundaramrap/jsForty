@@ -10,3 +10,15 @@ const person = {
 };
 
 //extract --> name,comapny , adress.city, using desturcting
+
+const {
+  name: userName,
+  company: {
+    name: userCompany,
+    location: { city: address },
+  },
+} = person;
+
+console.log(
+  `UserName : ${userName} companyName: ${userCompany} userAddress ${address}`
+);
