@@ -7,29 +7,33 @@ console.log("Student Management System");
  * @param {*} name
  * @param {*} age
  * @param {*} grade
- * 1. accepts student namee , age and grade , also calculate average
  */
-function student(name, age, grade) {
-  return {
-    name: name,
-    age: age,
-    grade: grade,
 
-    calcAvgGrade: function () {
-      if (this.grade.length === 0) return 0;
-      const total = this.grade.reduce((sum, grade) => sum + grade, 0);
+/// student mangement system
+
+/**
+ * 1. take name, age and grades
+ * 2. make a fucntion to calculate avg marks
+ * 3. make a fucntion to get the student information
+ */
+
+function studentDetail(sname, sage, smarks) {
+  return {
+    Name: sname,
+    Age: sage,
+    grade: smarks,
+
+    avgGrade: function () {
+      const total = this.grade.reduce((sum, marks) => sum + marks, 0);
       return total / this.grade.length;
     },
-
     getDetail: function () {
-      const avg = this.calcAvgGrade().toFixed(2);
-      console.log(
-        ` Name : ${this.name}   Age: ${this.age}  Average Grade:${avg} `
-      );
+      const marks = this.avgGrade();
+
+      console.log(`Name: ${this.Name} Age:${this.Age} Percentage:${marks}%`);
     },
   };
 }
 
-const user1 = student("Nella", 12, [54, 34, 56, 33, 55]);
-
+const user1 = studentDetail("Namjoon", 14, [98, 99, 87, 78, 88]);
 console.log(user1.getDetail());
