@@ -34,9 +34,7 @@ const bookStore = {
       return;
     }
     if (book.stock > 0) {
-      console.log(
-        `Yes, ${bookName}  is available and stock is : ${book.stock}`
-      );
+      console.log(`Yes ${bookName}  is available and stock is : ${book.stock}`);
     } else {
       console.log(`${bookName} is  out of stock .`);
     }
