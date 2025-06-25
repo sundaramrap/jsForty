@@ -30,17 +30,28 @@ const jerry = {
   age: 3,
 };
 
-function greetMe(obj) {
-  obj.logMessage = function () {
-    console.log(`${this.name} is  ${this.age} years old`);
+// function greetMe(obj) {
+//   obj.logMessage = function () {
+//     console.log(`${this.name} is  ${this.age} years old`);
+//   };
+// }
+
+// console.log(greetMe(tom));
+// tom.logMessage();
+
+// function sayName() {
+//   console.log("this inside a function", this);
+// }
+
+// sayName();
+
+function outer(a) {
+  console.log(`This is outer function`, this);
+
+  return function inner(b) {
+    console.log(`This is inner function`, this);
   };
 }
 
-console.log(greetMe(tom));
-tom.logMessage();
-
-function sayName() {
-  console.log("this inside a function", this);
-}
-
-sayName();
+const outerResult = outer(3);
+outerResult(4);
