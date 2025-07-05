@@ -68,3 +68,25 @@ try {
 } catch (error) {
   console.error(`Showing error message for user Creation`, error.message);
 }
+
+//custom error
+
+function ValidationError(message) {
+  //different prop like name, stack etc
+  this.name = "Validation Error";
+  this.message = message;
+}
+
+function validateCandiate(age) {
+  if (age < 60) {
+    throw new ValidationError(`you are 🚫 not senior`);
+  } else {
+    return console.log(`you are a 👍senior`);
+  }
+}
+
+try {
+  const message = validateCandiate(65);
+} catch (error) {
+  console.error(`${error.name}:${error.message}`);
+}
