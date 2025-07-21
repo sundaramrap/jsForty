@@ -134,12 +134,15 @@ if (personName.includes(personTwo)) {
   console.log("yes is its true");
 }
 //  T-016: What is the difference between the slice() and splice() methods?
-
+console.log(`_______-------TASK 16------_______`);
 console.log(
   ` SLICE() --> slice method is used to make a shallow copy of the array , it makes the string coversion where as 
   SPLICE() --> it muatete the array i.e makes original change in the array ,  `
 );
 //  T-017: Create an Array of alphanumeric strings. Sort the elements in both ascending and descending orders. You must be doing this in an immutable way such that the source array never gets modified.
+
+console.log(`_______-------TASK 17------_______`);
+
 //  T-018: Can you give examples of sparse and dense arrays?
 //  T-019: Give a practical usages of the .fill() method
 //  T-020: How to convert an array to a string?
