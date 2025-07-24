@@ -41,16 +41,38 @@ document.addEventListener("DOMContentLoaded", function () {
 console.log(`_-_-_-_-TASK -02_-_-_-_-_`);
 
 document.addEventListener("DOMContentLoaded", function () {
-  let tEle = document.querySelectorAll("ul#cars li");
-  console.log(tEle);
+  let listItems = document.querySelectorAll("ul#cars li");
+  console.log(listItems);
 
-  tEle.forEach((item, index) => {
-    if (index % 2 === 0) {
-      item.style.color = "white";
-      item.style.background = "black";
+  //we have a buffet of item lists
+  listItems.forEach((list, index) => {
+    if (index % 2 == 0) {
+      list.style.color = "white";
+      list.style.backgroundColor = "black";
     } else {
-      item.style.color = "black";
-      item.style.background = "white";
+      list.style.color = "black";
+      list.style.backgroundColor = "pink";
     }
   });
 });
+
+console.log(`_-_-_-_-TASK -04_-_-_-_-_`);
+
+function changeDog() {
+  //getting the paragph from the
+  let items = document.querySelector("p#dog");
+  let text = items.innerText;
+  const updateText = text.replace(/dog/gi, "cat");
+  items.innerText = updateText;
+}
+
+function uniqueLink() {
+  let links = document.querySelectorAll("a");
+  //return node list convert to array
+  let refrence = Array.from(links).map((link) => link.href);
+  console.log(refrence);
+  const uniqueRef = new Set(refrence);
+  const button = document.getElementById("buttonCount");
+
+  button.innerText = ` ${uniqueRef.size}`;
+}
