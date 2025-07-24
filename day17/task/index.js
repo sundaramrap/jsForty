@@ -1,4 +1,5 @@
 console.log(`_-_-_-_-TASK -01_-_-_-_-_`);
+
 document.addEventListener("DOMContentLoaded", function () {
   let text = document.getElementById("text").innerText;
   console.log(text);
@@ -35,4 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
   ans.textContent = `Most Frequent word is: ${freqWord}   Count: ${maxCount}`;
 
   //count the number of each text apperaing ,,by using includes and return the max xount of words from the answer.
+});
+
+console.log(`_-_-_-_-TASK -02_-_-_-_-_`);
+
+document.addEventListener("DOMContentLoaded", function () {
+  let tEle = document.querySelectorAll("ul#cars li");
+  console.log(tEle);
+
+  tEle.forEach((item, index) => {
+    if (index % 2 === 0) {
+      item.style.color = "white";
+      item.style.background = "black";
+    } else {
+      item.style.color = "black";
+      item.style.background = "white";
+    }
+  });
 });
