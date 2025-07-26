@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dynamic DOM</title>
+    <link rel="stylesheet" href="./index.css" />
     <script defer src="./fairWork.js"></script>
   </head>
   <body>
@@ -20,13 +21,12 @@
     </ul>
 
     <p style="background-color: bisque">Travesing in the DOM</p>
-    <div id="som1" style="background-color: pink">
-      This is grand Parent level
-      <p id="som2">
-        This is parent level.
 
-        <span id="some3">This is child</span>
-      </p>
+    <div id="som1" style="background-color: pink" class="main-class">
+      This is grand Parent level
+      <p id="som2">This is parent level.</p>
+      <span id="som3" style="color: green">This is child</span>
+      <h5 id="som4">END</h5>
     </div>
   </body>
 </html>

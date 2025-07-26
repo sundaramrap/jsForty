@@ -51,4 +51,21 @@ console.log("Text Content ::", loc3.textContent);
 
 ///traversing DOM /Navigating Dom
 {
+  const trav1 = document.querySelector("div#som1");
+  const trav2 = document.getElementById("som2");
+  console.log(trav2);
+  const som2Sibling = trav2.nextSibling;
+  console.log(`this is the sbling: `, som2Sibling);
+}
+
+//Manupulating STYLE
+
+{
+  const pElem = document.getElementById("som3");
+  pElem.style.color = "purple";
+}
+
+//Manupulatig Class
+{
+  const manuClass = document.get;
 }
