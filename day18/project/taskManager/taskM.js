@@ -6,6 +6,11 @@ function listFill() {
   const li = document.createElement("li");
   li.innerText = pInput;
   userList.appendChild(li);
+  userInput.value = "";
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "😒";
+  li.appendChild(deleteBtn);
 }
 
 /**
