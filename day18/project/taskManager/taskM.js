@@ -9,7 +9,8 @@ function listFill() {
   userInput.value = "";
 
   const deleteBtn = document.createElement("button");
-  deleteBtn.innerText = "😒";
+  deleteBtn.innerText = "🦉";
+  deleteBtn.classList.add("delstyle");
   li.appendChild(deleteBtn);
 }
 
