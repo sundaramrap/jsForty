@@ -17,19 +17,16 @@ function listFill() {
   const compBtn = document.createElement("button");
   compBtn.innerText = "🐸";
   compBtn.classList.add("btnstyle");
-  compBtn.onclick = function () {
-    li.classList.toggle("compbtn");
-  };
+  // compBtn.onclick = function () {
+  //   li.classList.toggle("compbtn");
+  // };
   li.appendChild(compBtn);
 
   //Edit Button
   const editBtn = document.createElement("button");
   editBtn.innerText = "Edit";
   editBtn.classList.add("btnstyle");
-  editBtn.onclick = function () {
-    const textEdit = li.firstChild;
-    console.log(textEdit);
-  };
+  editBtn.onclick = function () {};
 
   li.appendChild(editBtn);
 
