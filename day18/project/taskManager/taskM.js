@@ -17,16 +17,53 @@ function listFill() {
   const compBtn = document.createElement("button");
   compBtn.innerText = "🐸";
   compBtn.classList.add("btnstyle");
-  // compBtn.onclick = function () {
-  //   li.classList.toggle("compbtn");
-  // };
+  compBtn.onclick = function () {
+    li.classList.toggle("compbtn");
+  };
   li.appendChild(compBtn);
 
   //Edit Button
   const editBtn = document.createElement("button");
   editBtn.innerText = "Edit";
   editBtn.classList.add("btnstyle");
-  editBtn.onclick = function () {};
+
+  editBtn.onclick = function () {
+    //1.capturing the firstchild of li tag in lionechild
+    const lionechild = li.firstChild;
+    // console.log(lionechild);
+
+    //2.editing --if btn says Edit
+
+    if (editBtn.innerText === "Edit") {
+      //2.1 --> removing the Text from the panel ,capturing the firstChild then trimming its innerContext
+      const toEdit = lionechild.textContent.trim();
+      //2.2 -->making a text box and inserting value
+
+      const input = document.createElement("input");
+      input.type = "text";
+      input.value = toEdit;
+
+      li.insertBefore(input, lionechild);
+      li.removeChild(lionechild);
+      editBtn.innerText = "Save";
+    }
+    //3. btn says --> save
+    else {
+      //3.1 --> get the input content,which is enterd by the user
+      const input = li.querySelector("input");
+      //3.2 --> take out the value inside the input
+
+      const newText = input.value;
+
+      //3.3 --> create a textnode to relpace the input node
+
+      const textNode = document.createTextNode(newText);
+      li.insertBefore(textNode, input);
+      li.removeChild(input);
+
+      editBtn.innerText = "Edit";
+    }
+  };
 
   li.appendChild(editBtn);
 
