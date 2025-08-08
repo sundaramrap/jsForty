@@ -7,14 +7,10 @@ Add a reset button that clears the form.
 Use createElement, appendChild, setAttribute, and addEventListener.
  */
 
-//1. to create the name : [____] .. we need to create a div and have container .
-const userName = document.createElement("p");
-userName.innerText = "Name :";
+//1. User data form creation
 
-//creating input text for the user name
+const formData = document.createElement("form");
 
-const userNameInput = document.createElement("input");
-userNameInput.placeholder = "Enter First Name ";
-
-document.body.appendChild(userName);
-document.body.appendChild(userNameInput);
+formData.action = "/submit-data";
+formData.id = "userInfo";
+formData.method = "POST";
