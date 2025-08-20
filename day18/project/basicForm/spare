@@ -1,0 +1,44 @@
+const myForm = document.createElement("form");
+
+// Set attributes for the form
+myForm.action = "/submit-data";
+myForm.method = "POST";
+myForm.id = "dataForm";
+
+// Create an input field
+const inputField = document.createElement("input");
+inputField.type = "text";
+inputField.name = "username";
+inputField.placeholder = "Enter your username";
+
+// Create a submit button
+const submitButton = document.createElement("button");
+submitButton.type = "submit";
+submitButton.textContent = "Submit";
+
+// Append input and button to the form
+myForm.appendChild(inputField);
+myForm.appendChild(submitButton);
+
+// Append the form to the document body
+document.body.appendChild(myForm);
+
+// Create a div to show the result after the form
+const resultDiv = document.createElement("div");
+document.body.appendChild(resultDiv);
+
+// Handle form submission
+myForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent actual form submission
+
+  const username = inputField.value.trim(); // Get the entered value
+
+  if (username) {
+    resultDiv.textContent = `Name: ${username}`;
+  } else {
+    resultDiv.textContent = "Please enter a username.";
+  }
+
+  // Optionally clear input
+  inputField.value = "";
+});

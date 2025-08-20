@@ -6,8 +6,11 @@
 // //Inserting Before some Element
 
 // const span = document.createElement("span");
-// span.innerText = "This is a span.";
-// const loc1 = document.querySelector("p");
+// span.innerText = "This is a span ad has been added using insertBefore.";
+// span.style.color = "red";
+// const loc1 = document.querySelector("#sib1");
+// console.log("Inserting span before:", loc1);
+// loc1.parentNode.insertBefore(span, loc1);
 // document.body.insertBefore(span, loc1);
 
 // //Modifying content
