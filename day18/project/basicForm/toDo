@@ -1,0 +1,20 @@
+1. create a dyamic form
+
+user fields like
+
+1. email
+2. text
+3. number
+
+Hie welcome to form creation , select your format
+
+    radio buttons
+    - email
+    -number
+    -name
+
+    when user click on these raido buttons
+    the email : input text box will appear
+    same goes for the number , name etc.
+
+    two buttons here submit it ,reset it .

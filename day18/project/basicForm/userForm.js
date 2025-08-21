@@ -1,35 +1,27 @@
 console.log("...connected");
 
-/** Create a form dynamically using JavaScript and manipulate its behavior
-Add input fields dynamically based on user selection e.g., text, email, number
-Add a submit button that logs all the input values as an object.
-Add a reset button that clears the form.
-Use createElement, appendChild, setAttribute, and addEventListener.
- */
+// const lable1 = document.createElement("label");
+// lable1.innerText = "Select Your specification's";
 
-// //1. to create the name : [____] .. we need to create a div and have container .
-// const userName = document.createElement("p");
-// userName.innerText = "Name :";
+//create a form element
+const form = document.createElement("form");
 
-// //creating input text for the user name
+//creating a lable tag
+const label1 = document.createElement("label");
+label1.innerText = "Select Your Specifications";
+form.appendChild(label1);
 
-// const userNameInput = document.createElement("input");
-// userNameInput.placeholder = "Enter First Name ";
+//creating a radio button
+const rad1 = document.createElement("input");
+rad1.type = "radio";
+rad1.id = "uName";
 
-// document.body.appendChild(userName);
-// document.body.appendChild(userNameInput);
+const rad1Name = document.createElement("label");
 
-const userForm = document.createElement("form");
-userForm.action = "./submit-data";
-userForm.id = "dataForm";
-userForm.method = "POST";
+form.appendChild(rad1);
 
-//name input
+//create radio buttons for the selection
 
-const userName = document.createElement("input");
-userName.type = "text";
-userName.name = "Name :";
-userName.placeholder = "Enter your name ..";
-console.log(userName.innerText);
-userForm.appendChild(userName);
-document.body.appendChild(userForm);
+const userForm = document.getElementById("userForm");
+
+userForm.appendChild(form);
