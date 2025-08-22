@@ -1,7 +1,7 @@
 1. create a dyamic form
 
 user fields like
-
+0.name
 1. email
 2. text
 3. number
@@ -9,12 +9,19 @@ user fields like
 Hie welcome to form creation , select your format
 
     radio buttons
-    - email
+    -email
     -number
     -name
+    -city
 
     when user click on these raido buttons
     the email : input text box will appear
     same goes for the number , name etc.
 
     two buttons here submit it ,reset it .
+
+
+//task to connect radio button and on clicking creating a 
+input box and 
+
+on clicking the radio button a input box appears and then we enter the name 

@@ -1,0 +1,79 @@
+console.log("...connected");
+
+// const lable1 = document.createElement("label");
+// lable1.innerText = "Select Your specification's";
+
+//create a form element
+const form = document.createElement("form");
+
+//creating a lable tag
+const label1 = document.createElement("label");
+label1.innerText = "Select Your Specifications";
+form.appendChild(label1);
+form.appendChild(document.createElement("br"));
+form.appendChild(document.createElement("br"));
+
+//creating a radio button for name
+const rad1 = document.createElement("input");
+rad1.type = "radio";
+rad1.id = "uName";
+rad1.value = "name";
+const rad1Label = document.createElement("label");
+rad1Label.setAttribute("for", "uName");
+rad1Label.innerHTML = "Name";
+form.appendChild(rad1Label);
+form.appendChild(rad1);
+form.appendChild(document.createElement("br"));
+
+//create a radio button for email
+const rad2 = document.createElement("input");
+rad2.type = "radio";
+rad2.id = "uEmail";
+rad2.value = "email";
+const rad2Label = document.createElement("label");
+rad2Label.setAttribute("for", "uEmail");
+rad2Label.innerHTML = "Email";
+form.appendChild(rad2Label);
+form.appendChild(rad2);
+form.appendChild(document.createElement("br"));
+
+//create radio for user contact
+const rad3 = document.createElement("input");
+rad3.type = "radio";
+rad3.id = "uNumber";
+rad3.value = "number";
+const rad3Label = document.createElement("label");
+rad3Label.setAttribute("for", "uNumber");
+rad3Label.innerHTML = "Contact";
+form.appendChild(rad3Label);
+form.appendChild(rad3);
+form.appendChild(document.createElement("br"));
+
+//create radio for city
+
+const rad4 = document.createElement("input");
+rad4.type = "radio";
+rad4.id = "uCity";
+rad4.value = "city";
+const rad4Label = document.createElement("label");
+rad4Label.setAttribute("for", "uNumber");
+rad4Label.innerHTML = "City";
+form.appendChild(rad4Label);
+form.appendChild(rad4);
+form.appendChild(document.createElement("br"));
+
+// submit button
+const submitBtn = document.createElement("button");
+submitBtn.id = "submit";
+submitBtn.innerText = "SUBMIT";
+form.appendChild(submitBtn);
+
+//reset button
+const resetBtn = document.createElement("button");
+resetBtn.id = "reset";
+resetBtn.innerText = "RESET";
+form.appendChild(resetBtn);
+
+const userForm = document.getElementById("userForm");
+
+userForm.appendChild(form);

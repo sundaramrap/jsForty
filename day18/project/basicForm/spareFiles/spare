@@ -1,44 +1,47 @@
-const myForm = document.createElement("form");
+console.log("...connected");
 
-// Set attributes for the form
-myForm.action = "/submit-data";
-myForm.method = "POST";
-myForm.id = "dataForm";
+const form = document.createElement("form");
 
-// Create an input field
-const inputField = document.createElement("input");
-inputField.type = "text";
-inputField.name = "username";
-inputField.placeholder = "Enter your username";
+// Creating form label
+const label1 = document.createElement("label");
+label1.innerText = "Select Your Specifications";
+form.appendChild(label1);
+form.appendChild(document.createElement("br"));
+form.appendChild(document.createElement("br"));
 
-// Create a submit button
-const submitButton = document.createElement("button");
-submitButton.type = "submit";
-submitButton.textContent = "Submit";
+// Shared radio group name
+const radioName = "userSpec";
 
-// Append input and button to the form
-myForm.appendChild(inputField);
-myForm.appendChild(submitButton);
+// Helper to create radio + label
+function createRadio(id, value, text) {
+  const radio = document.createElement("input");
+  radio.type = "radio";
+  radio.id = id;
+  radio.value = value;
+  radio.name = radioName;
 
-// Append the form to the document body
-document.body.appendChild(myForm);
+  const label = document.createElement("label");
+  label.setAttribute("for", id);
+  label.innerText = text;
 
-// Create a div to show the result after the form
-const resultDiv = document.createElement("div");
-document.body.appendChild(resultDiv);
+  form.appendChild(label);
+  form.appendChild(radio);
+  form.appendChild(document.createElement("br"));
+}
 
-// Handle form submission
-myForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent actual form submission
+// Creating all radio buttons
+createRadio("uName", "name", "Name");
+createRadio("uEmail", "email", "Email");
+createRadio("uNumber", "number", "Contact");
+createRadio("uCity", "city", "City");
 
-  const username = inputField.value.trim(); // Get the entered value
+// Create and append the save button
+const saveBtn = document.createElement("button");
+saveBtn.id = "save";
+saveBtn.innerText = "SAVE";
+saveBtn.type = "submit"; // Optional
+form.appendChild(saveBtn);
 
-  if (username) {
-    resultDiv.textContent = `Name: ${username}`;
-  } else {
-    resultDiv.textContent = "Please enter a username.";
-  }
-
-  // Optionally clear input
-  inputField.value = "";
-});
+// Append form to DOM
+const userForm = document.getElementById("userForm");
+userForm.appendChild(form);
