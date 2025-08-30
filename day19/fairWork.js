@@ -21,3 +21,46 @@ myBtn2.onclick = function () {
 myBtn2.onclick = () => {
   handleClick("SeokJin");
 };
+
+//addEvent Listener ad removeEventListener
+
+const button3 = document.getElementById("cntBtn");
+let counter = 0;
+
+// //adding eventListener
+// button3.addEventListener("click", function () {
+//   console.log(`Incremented by -->`, counter);
+//   counter++;
+// });
+
+// // removingEventListener;
+
+// button3.removeEventListener("click", function () {
+//   console.log(`THis is removing the event listener`, counter);
+//   counter++;
+// });
+
+//here the removeEventListener wont work beacuse, beacuse the fucntion is anynomus and it is not clear to the system which ,function is being being called to be removed.
+
+//adding eventListener and handling the fucntion outside and passing it as a reffernce.
+
+const handleCount = function () {
+  console.log(`Incremented by -->`, counter);
+  counter++;
+};
+
+const greetMe = function () {
+  console.log(`Thank You !!`);
+};
+
+button3.addEventListener("click", handleCount);
+button3.addEventListener("click", greetMe);
+button3.removeEventListener("click", handleCount); //immediate rem handleCount
+
+//DOM Contenet Loaded--> It is used to help the programer to know that content for the dom has been loaded. Always work when applied through event listener
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("...dom is loaded");
+});
+
+//EventObject
