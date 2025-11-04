@@ -63,34 +63,34 @@
 
 // //Manupulating STYLE
 
-// {
-//   const pElem = document.getElementById("som3");
-//   pElem.style.color = "purple";
-// }
+{
+  const pElem = document.getElementById("som3");
+  pElem.style.color = "purple";
+}
 
-// //Manupulatig Class
-// {
-//   const manuClass = document.get;
-// }
+//Manupulatig Class
+{
+  const manuClass = document.get;
+}
 
-// {
-//   const trav1 = document.getElementById("travC");
-//   console.log("parent Element", trav1.parentElement);
-//   console.log("parent Node", trav1.parentNode);
-// }
+{
+  const trav1 = document.getElementById("travC");
+  console.log("parent Element", trav1.parentElement);
+  console.log("parent Node", trav1.parentNode);
+}
 
-// {
-//   const trav1 = document.getElementById("travel");
-//   console.log("Chil Element", trav1.children);
-//   console.log("Chil Node", trav1.childNodes);
-//   console.log(`This is the sibling`, trav1.nextSibling);
-// }
+{
+  const trav1 = document.getElementById("travel");
+  console.log("Chil Element", trav1.children);
+  console.log("Chil Node", trav1.childNodes);
+  console.log(`This is the sibling`, trav1.nextSibling);
+}
 
-// {
-//   const trav1 = document.getElementById("travP");
+{
+  const trav1 = document.getElementById("travP");
 
-//   console.log(`This is the sibling`, trav1.nextSibling.nextSibling.nextSibling);
-// }
+  console.log(`This is the sibling`, trav1.nextSibling.nextSibling.nextSibling);
+}
 
 {
   //manupulating Style

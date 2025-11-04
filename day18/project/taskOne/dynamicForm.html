@@ -1,0 +1,25 @@
+<!-- Create a form dynamically using JavaScript and manipulate its behavior
+Add input fields dynamically based on user selection e.g., text, email, number
+Add a submit button that logs all the input values as an object.
+Add a reset button that clears the form.
+Use createElement, appendChild, setAttribute, and addEventListener. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Form</title>
+    <script defer src="dynamicForm.js"></script>
+  </head>
+  <body>
+    <h3>Form Fill</h3>
+    <p>Select your preference's</p>
+    <input type="checkbox" id="us1" value="Name" onclick="userName" />
+    <label for="us1">Name</label>
+    <input type="checkbox" id="us2" value="Email" />
+    <label for="us2">Email</label>
+    <input type="checkbox" id="us3" value="Address" />
+    <label for="us3">Adderss</label>
+  </body>
+</html>
