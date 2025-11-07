@@ -14,10 +14,33 @@ function handle2btnElem() {
 }
 
 myBtn2Elem.addEventListener("click", handle2btnElem);
-
-const incrementElement = document.getElementById("countBtn");
+//count function
 let count = 0;
-incrementElement.addEventListener("click", function () {
+function handleCount() {
   console.log("counter", count);
   count++;
+}
+const incrementElement = document.getElementById("countBtn");
+incrementElement.addEventListener("click", handleCount);
+incrementElement.addEventListener("click", () => {
+  handleClick("rm");
 });
+incrementElement.removeEventListener("click", handleCount);
+
+//From line 16- 28 addeventlistener, removeeventlistener and handling multiple listener have been handled.
+
+//DOM contenet Loaded
+//some actions needs to be performed when a dom content is loaded, for which we use addEvenListener
+
+//what is inside eventObject
+//event object tells the user what , event is active on the current context which is being used
+
+const searchElement = document.getElementById("search-id");
+
+function handleSearchEvent(event) {
+  console.log(event);
+}
+
+searchElement.addEventListener("change", handleSearchEvent);
+
+//event bubbling, capturing and dekegation

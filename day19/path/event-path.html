@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Path</title>
+    <script defer src="event-path.js"></script>
+  </head>
+  <body>
+    <h3>Event bubbling Capturing and Delegation</h3>
+    <hr />
+    <div id="grandParent">
+      <p>GrandParent</p>
+      <div id="parent">
+        <p>Parent</p>
+        <div id="child">
+          <p>Child</p>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <h4>Event Listener</h4>
+    <ul id="unorderLi">
+      <li>Cat</li>
+      <li>Dog</li>
+      <li>Squrille</li>
+    </ul>
+
+    <hr />
+    <hr />
+    <div id="father" style="padding: 30px; background: burlywood">
+      Parent
+      <button id="son" style="margin: 10px">Click Me!</button>
+    </div>
+    <hr />
+    <div>
+      <p id="welcome">Hello to User</p>
+      <button id="userVal" onclick="logUser('Seokjin')">Validate</button>
+    </div>
+    <hr />
+    <div></div>
+  </body>
+</html>
