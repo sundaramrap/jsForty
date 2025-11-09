@@ -60,9 +60,15 @@ function logUser(userame) {
 }
 
 //listening to the event
-
+let flag = false;
 document.addEventListener("userLog", (e) => {
   const user = e.detail.userame;
+  if (flag === false) {
+    document.getElementById("welcome").textContent = `Hello to ${user}`;
 
-  document.getElementById("welcome").textContent = `Hello to ${user}`;
+    flag = true;
+  } else {
+    document.getElementById("welcome").textContent = `Hello to User`;
+    flag = false;
+  }
 });
