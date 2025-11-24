@@ -43,4 +43,6 @@ function handleSearchEvent(event) {
 
 searchElement.addEventListener("change", handleSearchEvent);
 
-//event bubbling, capturing and dekegation
+//event bubbling, capturing and delegation
+
+//22ndNovember2025
