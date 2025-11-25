@@ -18,6 +18,25 @@ document.addEventListener("userLogin", function (e) {
 
 document.dispatchEvent(myevent);
 
-document.querySelector(".userLog").addEventListener("submit", function (e) {
-  console.log(`button has been clicked `);
+// document.querySelector(".userLog").addEventListener("submit", function (e) {
+//   console.log(`button has been clicked `);
+// });
+
+//make a custom event and then implement int  the button clicked.
+function logVerify(userName) {
+  const usrevent = new CustomEvent("logUsr", {
+    detail: { userName },
+  });
+
+  document.dispatchEvent(usrevent);
+}
+
+document.addEventListener("logUsr", (e) => {
+  //get the class which contain the box , and change the welcome user to the userName which has been passed on.
+
+  // taking out the userName with the help of the event which has been passed on .
+
+  const userN = e.detail.userName;
+
+  document.querySelector("#welcome").textContent = `Welcome ${userN}`;
 });
