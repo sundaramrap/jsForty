@@ -9,3 +9,8 @@ body {
 .content.active {
   display: block;
 }
+
+.tab.active {
+  background: #222;
+  color: #fff;
+}
