@@ -28,3 +28,7 @@ function showContent(tabNumber) {
     content.classList.toggle("active", content.dataset.tab === tabNumber);
   });
 }
+
+document.querySelectorAll(".tab, .content").forEach((el) => {
+  el.classList.remove("active");
+});
