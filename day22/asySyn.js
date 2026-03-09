@@ -21,20 +21,27 @@ console.log("Connected....");
 
 // console.log("hello third");
 
-//callBack function
-//**When a function calls another function inside it , and then function is excuted later in the code we call that function callback function  */
+//**callBack function
+// When a function calls another function inside it , and then function is excuted later in the code we call that function callback function  */
 
-function firstRun(textMessage, callback) {
-  console.log(`Hello to you ${textMessage}`);
-  callback();
-}
+// function firstRun(textMessage, callback) {
+//   console.log(`Hello to you ${textMessage}`);
+//   setTimeout(() => {
+//     callback();
+//   }, 4000);
+// }
 
-function greetMe() {
-  console.log("Thank you for visting");
-}
+// function greetMe() {
+//   console.log("Thank you for visting");
+// }
 
-//calling the function firstRun
+// //calling the function firstRun
 
-firstRun("Seokjin", greetMe);
+// firstRun("Seokjin", greetMe);
 
 //second example of callBack Function
+//async-function example....async JavaScript..pizzaShop
+
+function orderPizza(type, name) {
+  //Query the pizzaHub for a store
+}
