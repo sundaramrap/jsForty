@@ -1,4 +1,4 @@
-console.log("Connected....");
+// console.log("Connected....");
 //Synchronus
 /**
  * 1.When the code is excuted line by line, wait for the current running code to complete  the execution before starting off the next line of the code.
@@ -44,4 +44,12 @@ console.log("Connected....");
 
 function orderPizza(type, name) {
   //Query the pizzaHub for a store
+  query(`api/pizzahub/`, (result, error) => {
+    if (!error) {
+      let shopId = result[0];
+      console.log(shopId);
+    }
+  });
 }
+
+orderPizza("veg", "Margherita");
